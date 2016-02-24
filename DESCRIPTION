@@ -11,6 +11,7 @@ Authors@R: c(person(given = c("Andreas", "Dominik"), family = "Cullmann",
     )
 Description: An S4 implementation of the unbiased extension of the model-assisted synthetic-regression estimator proposed by Mandallaz (2013), Mandallaz et al. (2013) and Mandallaz (2014).
     It yields smaller variances than the standard bias correction, the generalised regression estimator.
+URL: https://github.com/fvafrCU/maSAE
 License: GPL (>= 2)
 Depends: methods
 Suggests: nlme
