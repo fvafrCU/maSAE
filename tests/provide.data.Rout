@@ -1,0 +1,80 @@
+
+R version 3.1.0 (2014-04-10) -- "Spring Dance"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: i486-pc-linux-gnu (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+=========================
+= Bitte haben Sie Spass. =
+=========================
+
+[1] "http://10.127.255.17:8080"
+> rows <- 10^4
+> if (system("hostname", intern = TRUE) == "f060"){
++   bwi3 <- read.csv("/trans/p/data/projekte/bwi/bwi3/BA_Anteile_TE_BWI3.csv", nrows = rows)
++ } else {
++   if (system("hostname", intern = TRUE) == "h5") {
++     bwi3 <- read.csv("/home/nik/fvadat/bwi3/BA_Anteile_TE_BWI3.csv", nrows = rows)
++   } else{
++     bwi3 <- read.csv("/home/qwer/fvadat/bwi3/BA_Anteile_TE_BWI3.csv", nrows = rows)
++   }
++ }
+> preds <- c('V_Fi', 'H_Lorey', 'n_PB_WZP4')
+> bwi3 <- bwi3[, c("TNr", preds, 'V_ges')]
+> preds <- c('x1', 'x2', 'x3')
+> names(bwi3) <- c('clustid',preds , 'y')
+> 
+> bwi3$inclusion <- TRUE
+> clustids <- unique(bwi3$clustid)
+> set.seed(1234)
+> s1 <- sample(clustids
++              , as.integer(length(clustids)*0.1)
++              , replace = FALSE)
+> set.seed(1234)
+> s2 <- sample(s1
++              , as.integer(length(s1)*0.2)
++              , replace = FALSE)
+> bwi3$s1 <- bwi3$clustid %in% s1
+> bwi3$s2 <- bwi3$clustid %in% s2
+> set.seed(347456)
+> g <- sample(clustids
++             , as.integer(length(clustids)*.5)
++             , replace = FALSE)
+> set.seed(3457213)
+> g1 <- sample(g
++              , as.integer(length(g)*.5)
++              , replace = FALSE)
+> bwi3$g <- ifelse(bwi3$clustid %in% g1 ,'a',
++                  ifelse(bwi3$clustid %in% g ,'b', NA))
+> tmpfile <- '/tmp/rdata'
+> set.seed(894934211)
+> bwi3$clustid <- floor(runif(1)*100)+bwi3$clustid
+> write.table(bwi3, tmpfile)
+> ## ## ## ## ## ## real data
+> dfall <- read.table(tmpfile)
+> dfs0 <- dfall[! dfall$s1, ] ## in s0
+> dfs0$y <- NULL
+> dfs0$s1 <- dfs0$s2 <- NULL
+> phases0 <- dfs0; phases0$x1 <- NULL
+> dfs1 <-  dfall[dfall$s1 & !dfall$s2, ] ## in s1
+> dfs1$y <- NULL
+> dfs1$s1 <- dfs1$s2 <- NULL
+> dfs2 <-  dfall[dfall$s2, ] ## in s2
+> dfs2$s1 <- dfs2$s2 <- NULL
+> write.table(dfs0, '../data/s0.txt')
+> write.table(dfs1, '../data/s1.txt')
+> write.table(dfs2, '../data/s2.txt')
+> 

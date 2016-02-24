@@ -1,0 +1,7 @@
+tests/.*\.r\.out
+tests/.*\.rout
+tests/.*\.R\.out
+tests/.*\.Rout
+tests/confirmed.*
+tests/provide.*
+tests/s[0-2]\.txt

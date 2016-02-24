@@ -1,0 +1,16 @@
+Package: maSAE
+Type: Package
+Title: Mandallaz' Model-Assisted Small Area Estimators
+Version: 0.1-4
+Date: 2016-02-23
+Authors@R: c(person(given = c("Andreas", "Dominik"), family = "Cullmann",
+    email = "r-package_masae@arcor.de", role = c("aut","cre"), comment = NULL,
+    first = NULL, last = NULL)
+    , person(given = c("Daniel"), family=c("Mandallaz"), role = c("ctb"))
+    , person(given = c("Alexander", "Francis"), family=c("Massey"), role = c("ctb"))
+    )
+Description: An S4 implementation of the unbiased extension of the model-assisted synthetic-regression estimator proposed by Mandallaz (2013), Mandallaz et al. (2013) and Mandallaz (2014).
+    It yields smaller variances than the standard bias correction, the generalised regression estimator.
+License: GPL (>= 2)
+Depends: methods
+Suggests: nlme
