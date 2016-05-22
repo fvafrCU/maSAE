@@ -1,14 +1,13 @@
 Package: maSAE
 Type: Package
 Title: Mandallaz' Model-Assisted Small Area Estimators
-Version: 0.1-4
-Date: 2016-02-25
+Version: 0.1-5
+Date: 2016-05-22
 Authors@R: c(person(given = c("Andreas", "Dominik"), family = "Cullmann",
-    email = "r-package_masae@arcor.de", role = c("aut","cre"), comment = NULL,
-    first = NULL, last = NULL)
-    , person(given = c("Daniel"), family = "Mandallaz", role = c("ctb"))
-    , person(given = c("Alexander", "Francis"), family = "Massey", 
-             role = c("ctb"))
+            email = "r-package_masae@arcor.de", role = c("aut","cre")),
+        person(given = c("Daniel"), family = "Mandallaz", role = c("ctb")),
+        person(given = c("Alexander", "Francis"), family = "Massey", 
+        role = c("ctb"))
     )
 Description: An S4 implementation of the unbiased extension of the model-
     assisted synthetic-regression estimator proposed by 
