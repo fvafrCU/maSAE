@@ -1,6 +1,6 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/maSAE)](https://cran.r-project.org/package=maSAE)
-[![RStudio_downloads_monthly](https://cranlogs.r-pkg.org/badges/maSAE)](https://cran.rstudio.com/web/packages/maSAE/index.html)
-[![RStudio_downloads_total](https://cranlogs.r-pkg.org/badges/grand-total/maSAE)](https://cran.rstudio.com/web/packages/maSAE/index.html)
+[![RStudio_downloads_monthly](https://cranlogs.r-pkg.org/badges/maSAE)](https://cran.r-project.org/package=index.html)
+[![RStudio_downloads_total](https://cranlogs.r-pkg.org/badges/grand-total/maSAE)](https://cran.r-project.org/package=index.html)
 
 # maSAE
 This is an R package for small area estimation (the unbiased extension of the
