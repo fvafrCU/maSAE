@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fvafrCU/maSAE.svg?branch=master)](https://travis-ci.org/fvafrCU/maSAE)
+[![Coverage Status](https://codecov.io/github/fvafrCU/maSAE/coverage.svg?branch=master)](https://codecov.io/github/fvafrCU/maSAE?branch=master)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/maSAE)](https://cran.r-project.org/package=maSAE)
 [![RStudio_downloads_monthly](https://cranlogs.r-pkg.org/badges/maSAE)](https://cran.r-project.org/package=maSAE)
 [![RStudio_downloads_total](https://cranlogs.r-pkg.org/badges/grand-total/maSAE)](https://cran.r-project.org/package=maSAE)
