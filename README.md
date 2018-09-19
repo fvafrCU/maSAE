@@ -1,18 +1,1 @@
-[![Build Status](https://travis-ci.org/fvafrCU/maSAE.svg?branch=master)](https://travis-ci.org/fvafrCU/maSAE)
-[![Coverage Status](https://codecov.io/github/fvafrCU/maSAE/coverage.svg?branch=master)](https://codecov.io/github/fvafrCU/maSAE?branch=master)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/maSAE)](https://cran.r-project.org/package=maSAE)
-[![RStudio_downloads_monthly](https://cranlogs.r-pkg.org/badges/maSAE)](https://cran.r-project.org/package=maSAE)
-[![RStudio_downloads_total](https://cranlogs.r-pkg.org/badges/grand-total/maSAE)](https://cran.r-project.org/package=maSAE)
-
-# maSAE
-This is an R package for small area estimation (the unbiased extension of the
-model-assisted synthetic-regression estimator proposed by Daniel Mandallaz of
-ETH Zuerich in 2013 and 2014.)
-
-In R, try:
-
-```R
-library("devtools")
-install_github("fvafrCU/maSAE")
-help("maSAE-package", package = "maSAE")
-```
+This project has moved to [https://gitlab.com/fvafrCU/maSAE](https://gitlab.com/fvafrCU/maSAE).
